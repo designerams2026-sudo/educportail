@@ -1,0 +1,261 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --border: #e2e4e9;
+  --text-primary: #1c2029;
+  --text-secondary: #5a5f6b;
+  --accent: #1d4ed8;
+
+  --violet: #6d4aed;
+  --violet-dark: #4a2fb0;
+  --bleu: #2f6fed;
+  --bleu-dark: #1f4fae;
+  --vert: #1f9d55;
+  --vert-dark: #14713c;
+  --cobalt: #0b3d91;
+  --cobalt-dark: #072a66;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+header.top-bar {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+header.top-bar h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+header.top-bar p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--text-secondary);
+}
+
+.card .icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Pages d'espace */
+.espace-page {
+  min-height: 100vh;
+}
+
+.espace-header {
+  padding: 2rem;
+  color: #fff;
+}
+
+.espace-header a.back {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.espace-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  margin: 0.75rem 0 0;
+}
+
+.login-box {
+  max-width: 360px;
+  margin: 3rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.login-box label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 1rem 0 0.35rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.theme-eleve .espace-header,
+.theme-eleve .login-box button { background: var(--vert); }
+.theme-eleve .espace-header { background: linear-gradient(var(--vert), var(--vert-dark)); }
+
+.theme-professeur .espace-header { background: linear-gradient(var(--bleu), var(--bleu-dark)); }
+.theme-professeur .login-box button { background: var(--bleu); }
+
+.theme-parent .espace-header { background: linear-gradient(var(--bleu), var(--bleu-dark)); }
+.theme-parent .login-box button { background: var(--bleu); }
+
+.theme-admin .espace-header { background: linear-gradient(var(--violet), var(--violet-dark)); }
+.theme-admin .login-box button { background: var(--violet); }
+
+.theme-super .espace-header { background: linear-gradient(var(--cobalt), var(--cobalt-dark)); }
+.theme-super .login-box button { background: var(--cobalt); }
+
+.theme-eleve .bureau-topbar, .theme-eleve .section-label { background: var(--vert); }
+.theme-professeur .bureau-topbar, .theme-professeur .section-label { background: var(--bleu); }
+.theme-parent .bureau-topbar, .theme-parent .section-label { background: var(--bleu); }
+.theme-admin .bureau-topbar, .theme-admin .section-label { background: var(--violet); }
+.theme-super .bureau-topbar, .theme-super .section-label { background: var(--cobalt); }
+
+/* Bureau d'applications (page après connexion) */
+.bureau-topbar {
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.bureau-topbar .logout {
+  margin-left: auto;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.bureau-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.tile .icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tile span.label {
+  font-size: 0.82rem;
+}
+
+.tile .badge {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.7rem;
+  padding: 0 6px;
+}

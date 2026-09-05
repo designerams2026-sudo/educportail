@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Eduportail — Espace Super administrateur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="espace-page theme-super">
+  <div class="espace-header">
+    <a class="back" href="../index.html">&larr; Retour au portail</a>
+    <h1>Espace Super administrateur</h1>
+  </div>
+
+  <div class="login-box">
+    <form onsubmit="event.preventDefault(); window.location.href='super-administrateur-bureau.html';">
+      <label for="identifiant">Identifiant</label>
+      <input type="text" id="identifiant" name="identifiant" placeholder="root">
+
+      <label for="mdp">Mot de passe</label>
+      <input type="password" id="mdp" name="mdp" placeholder="Mot de passe">
+
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
+</body>
+</html>
